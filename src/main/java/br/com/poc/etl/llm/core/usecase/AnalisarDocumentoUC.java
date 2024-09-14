@@ -76,7 +76,7 @@ public class AnalisarDocumentoUC {
 
         var openAiApi = new OpenAiApi("https://api.groq.com/openai", "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");
         var openAiChatOptions = OpenAiChatOptions.builder()
-                .withModel("llama3-70b-8192")
+                .withModel("llama3-8b-8192")
                 .withMaxTokens(2000)
                 .build();
         var chatModel = new OpenAiChatModel(openAiApi, openAiChatOptions);
