@@ -1,6 +1,8 @@
 package br.com.poc.etl.llm.core.usecase;
 
 import br.com.poc.etl.llm.core.dto.MapeamentoDTO;
+import br.com.poc.etl.llm.core.entity.Entrevista;
+import br.com.poc.etl.llm.core.mapper.EntrevistaMapper;
 import br.com.poc.etl.llm.core.parser.JsonToObject;
 import dev.langchain4j.data.document.Document;
 import dev.langchain4j.data.document.DocumentParser;
@@ -100,6 +102,9 @@ public class AnalisarDocumentoUC {
         }
         JsonToObject jsonToObject = new JsonToObject();
         var mapeamento = jsonToObject.convert(json);
+
+
+        List<Entrevista> entrevista = EntrevistaMapper.INSTANCE.mapDtoToEntrevistas(mapeamento.getDtEntrevista());
 
         return "";
     }
