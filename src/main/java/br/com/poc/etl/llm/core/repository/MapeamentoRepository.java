@@ -2,7 +2,7 @@ package br.com.poc.etl.llm.core.repository;
 
 import br.com.poc.etl.llm.core.dto.MapeamentoDTO;
 
-public interface AnaliseRepository {
+public interface MapeamentoRepository {
 
-    String processarDados(String documento);
+    void popularEntidades(String mapeamentoDTO);
 }

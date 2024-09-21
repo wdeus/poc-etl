@@ -1,6 +1,5 @@
 package br.com.poc.etl.llm.outbound.llm;
 
-import br.com.poc.etl.llm.core.dto.MapeamentoDTO;
 import br.com.poc.etl.llm.core.repository.AnaliseRepository;
 import br.com.poc.etl.llm.core.repository.FormatadorRepository;
 import br.com.poc.etl.llm.outbound.llm.config.LlmConfig;
@@ -24,18 +23,17 @@ public class AnaliseRepositoryImpl implements AnaliseRepository {
 
     @Override
     @SneakyThrows
-    public MapeamentoDTO processarDados(String documento) {
+    public String processarDados(String documento) {
         var chatModel = llmConfig.executar();
         Map<String, Object> params = new HashMap<>();
         params.put("document", documento);
         params.put("format", carregarPrompt());
-
         String mapeamentoDTO = ChatClient.create(chatModel).prompt()
-                .user(u -> u.text("Retorne apenas a estrutura json: {format} de acordo com os dados a seguir: {document}. Você deve retornar um unico item, se atentando aos campos que são listas []. Para os campos que não são listas, deve analisar e agrupar as informações. ")
+                .user(u -> u.text("Retorne apenas a estrutura json: {format} de acordo com os dados a seguir: {document}. Você deve retornar uma lista da estrutura fornecida, de acordo com cada linha do documento em analise")
                         .params(params))
                 .call()
                 .content();
-        return formatadorRepository.executar(mapeamentoDTO);
+        return mapeamentoDTO;
     }
 
     public String carregarPrompt() throws IOException {

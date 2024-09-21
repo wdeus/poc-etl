@@ -11,6 +11,6 @@ import java.util.List;
 @NoArgsConstructor
 public class Vaga {
 
-    private List<String> descricao;
-    private List<String> gestorResponsavel;
+    private String titulo;
+    private String responsavel;
 }
