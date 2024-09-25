@@ -3,29 +3,33 @@ package br.gov.sp.cps.api.pixel.core.domain.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 @Entity
-@Table(name = "dim_vaga")
-public class Vaga {
+@Table(name = "dim_processo_seletivo")
+public class ProcessoSeletivo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idVaga;
+    private int idProcessoSeletivo;
 
     @Column(nullable = false)
-    private String titulo;
+    private String nome;
 
     @Column(nullable = false)
-    private int nrPosicoes;
+    @Temporal(TemporalType.DATE)
+    private Date dtInicio;
 
     @Column(nullable = false)
-    private String requisitos;
+    @Temporal(TemporalType.DATE)
+    private Date dtFim;
 
     @Column(nullable = false)
     private String status;
 
     @Column(nullable = false)
-    private String localizacao;
+    private String criador;
 
     @Column(nullable = false)
-    private String responsavel;
+    private String descricao;
 }
