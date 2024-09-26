@@ -1,7 +1,7 @@
-package br.gov.sp.cps.api.pixel.outbound.jpa;
+package br.com.poc.etl.llm.outbound.jpa;
 
-import br.gov.sp.cps.api.pixel.core.domain.entity.ProcessoSeletivo;
-import br.gov.sp.cps.api.pixel.core.domain.repository.ProcessoSeletivoRepository;
+import br.com.poc.etl.llm.core.entity.ProcessoSeletivo;
+import br.com.poc.etl.llm.core.repository.ProcessoSeletivoRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

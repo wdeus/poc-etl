@@ -1,6 +1,6 @@
-package br.gov.sp.cps.api.pixel.core.domain.repository;
+package br.com.poc.etl.llm.core.repository;
 
-import br.gov.sp.cps.api.pixel.core.domain.entity.Vaga;
+import br.com.poc.etl.llm.core.entity.Vaga;
 
 import java.util.List;
 

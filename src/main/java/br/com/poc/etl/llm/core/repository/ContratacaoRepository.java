@@ -1,6 +1,6 @@
-package br.gov.sp.cps.api.pixel.core.domain.repository;
+package br.com.poc.etl.llm.core.repository;
 
-import br.gov.sp.cps.api.pixel.core.domain.entity.Contratacao;
+import br.com.poc.etl.llm.core.entity.Contratacao;
 
 import java.util.List;
 

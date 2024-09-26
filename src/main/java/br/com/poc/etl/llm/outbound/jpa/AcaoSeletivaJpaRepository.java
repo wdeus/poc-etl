@@ -1,7 +1,7 @@
-package br.gov.sp.cps.api.pixel.outbound.jpa;
+package br.com.poc.etl.llm.outbound.jpa;
 
-import br.gov.sp.cps.api.pixel.core.domain.entity.AcaoSeletiva;
-import br.gov.sp.cps.api.pixel.core.domain.repository.AcaoSeletivaRepository;
+import br.com.poc.etl.llm.core.entity.AcaoSeletiva;
+import br.com.poc.etl.llm.core.repository.AcaoSeletivaRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

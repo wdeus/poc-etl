@@ -1,6 +1,6 @@
-package br.gov.sp.cps.api.pixel.core.domain.repository;
+package br.com.poc.etl.llm.core.repository;
 
-import br.gov.sp.cps.api.pixel.core.domain.entity.AcaoSeletiva;
+import br.com.poc.etl.llm.core.entity.AcaoSeletiva;
 
 import java.util.List;
 

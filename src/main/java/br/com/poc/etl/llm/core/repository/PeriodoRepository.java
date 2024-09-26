@@ -1,6 +1,6 @@
-package br.gov.sp.cps.api.pixel.core.domain.repository;
+package br.com.poc.etl.llm.core.repository;
 
-import br.gov.sp.cps.api.pixel.core.domain.entity.Periodo;
+import br.com.poc.etl.llm.core.entity.Periodo;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package br.gov.sp.cps.api.pixel.outbound.jpa;
+package br.com.poc.etl.llm.outbound.jpa;
 
-import br.gov.sp.cps.api.pixel.core.domain.entity.Entrevista;
-import br.gov.sp.cps.api.pixel.core.domain.repository.EntrevistaRepository;
+import br.com.poc.etl.llm.core.entity.Entrevista;
+import br.com.poc.etl.llm.core.repository.EntrevistaRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
